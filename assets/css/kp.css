@@ -1,0 +1,226 @@
+/* ============================================
+   KAILKILAT.COM - Gaya dasar (dimuat di semua halaman)
+   Tema biru, teks hitam, tanpa warna abu
+   ============================================ */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Palet warna dipakai bersama semua halaman */
+:root {
+    --blue-bg: #0ea5e9;
+    --blue-head: #bae6fd;
+    --blue-card: #e0f2fe;
+    --blue-soft: #f0f9ff;
+    --blue-line: #7dd3fc;
+    --blue-deep: #075985;
+    --text: #111827;
+}
+
+body {
+    background: var(--blue-bg);
+    color: var(--text);
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 40px;
+    background: var(--blue-head);
+    color: var(--text);
+    border-bottom: 3px solid var(--blue-deep);
+}
+header nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+}
+header .logo .brand-logo {
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+header nav a {
+    margin: 0 5px;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+}
+header nav a:hover {
+    text-decoration: underline;
+}
+header nav a.nav-aktif {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+.nav-btn {
+    background: var(--blue-deep);
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+.nav-btn:hover {
+    background: #0c4a6e;
+    text-decoration: none;
+}
+button.nav-btn {
+    border: none;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+}
+header nav .logout-form {
+    display: inline;
+    margin: 0;
+}
+.nav-user {
+    margin: 0 12px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Tombol */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--blue-deep);
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+}
+.btn:hover {
+    background: #0c4a6e;
+}
+.btn-soft {
+    background: var(--blue-soft);
+    color: var(--blue-deep);
+    border: 2px solid var(--blue-line);
+}
+.btn-soft:hover {
+    background: #ffffff;
+}
+.btn-danger {
+    background: #ffffff;
+    color: var(--blue-deep);
+    border: 2px solid var(--blue-deep);
+}
+.btn-danger:hover {
+    background: var(--blue-deep);
+    color: #ffffff;
+}
+.btn.disabled {
+    background: var(--blue-soft);
+    color: var(--blue-deep);
+    cursor: not-allowed;
+    opacity: 0.85;
+}
+.btn-kecil {
+    padding: 6px 11px;
+    font-size: 12px;
+}
+
+/* Banner judul halaman */
+.page-banner {
+    background: var(--blue-head);
+    padding: 60px 40px;
+    text-align: center;
+    color: var(--text);
+    border-bottom: 3px solid var(--blue-deep);
+}
+.page-banner h1 {
+    font-size: 34px;
+    color: var(--text);
+}
+.page-banner p {
+    font-size: 15px;
+    color: var(--text);
+}
+
+/* Pesan notifikasi */
+.alert-msg {
+    max-width: 1000px;
+    margin: 18px auto;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    background: #ffffff;
+    border-left: 5px solid var(--blue-deep);
+    color: var(--text);
+}
+.alert-msg.flash {
+    margin: 15px auto;
+}
+.alert-msg.success {
+    border-left-color: #15803d;
+}
+.alert-msg.error {
+    border-left-color: #b91c1c;
+}
+.alert-msg a {
+    color: var(--blue-deep);
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    background: var(--blue-head);
+    color: var(--text);
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    border-top: 3px solid var(--blue-deep);
+}
+
+/* Layar kecil */
+@media (max-width: 700px) {
+    header {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 12px 16px;
+    }
+    header nav {
+        width: 100%;
+        margin-left: 0;
+        justify-content: flex-start;
+        gap: 8px;
+    }
+    header nav a,
+    button.nav-btn {
+        font-size: 13px;
+    }
+    .nav-user {
+        margin: 0;
+        width: 100%;
+        font-size: 13px;
+    }
+    .page-banner {
+        padding: 35px 18px;
+    }
+    .page-banner h1 {
+        font-size: 25px;
+    }
+}

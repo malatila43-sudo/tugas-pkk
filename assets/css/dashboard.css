@@ -1,0 +1,276 @@
+/* ============================================
+   KAILKILAT.COM - Gaya khusus dashboard
+   (dashboard penyewa & dashboard pemilik barang)
+   ============================================ */
+
+.wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 25px 20px 10px;
+}
+
+/* Kartu angka ringkasan */
+.grid-stat {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 25px;
+}
+.stat-card {
+    background: var(--blue-card);
+    border: 2px solid var(--blue-line);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.stat-angka {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--blue-deep);
+    word-break: break-word;
+}
+.stat-label {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Panel / kartu bagian */
+.panel {
+    background: var(--blue-card);
+    border: 2px solid var(--blue-line);
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+.panel-title {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: var(--text);
+}
+.panel p {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+.total-besar {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--blue-deep);
+    margin-bottom: 15px !important;
+}
+
+/* Tabel daftar */
+.tabel-bungkus {
+    overflow-x: auto;
+}
+.tabel {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    font-size: 13px;
+    min-width: 700px;
+}
+.tabel th,
+.tabel td {
+    border: 1px solid var(--blue-line);
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: middle;
+}
+.tabel th {
+    background: var(--blue-soft);
+    font-weight: 700;
+}
+.tabel td {
+    color: var(--text);
+}
+.kolom-aksi {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+.kolom-aksi form {
+    margin: 0;
+}
+
+/* Label status */
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    border: 2px solid var(--blue-deep);
+    color: var(--blue-deep);
+    white-space: nowrap;
+}
+.badge-akan {
+    background: var(--blue-soft);
+}
+.badge-berjalan {
+    background: var(--blue-line);
+    color: #ffffff;
+}
+.badge-selesai {
+    background: #ffffff;
+}
+
+.form-status { margin: 0; }
+.status-select {
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    border: 2px solid var(--blue-deep);
+    color: var(--blue-deep);
+    background: #ffffff;
+    cursor: pointer;
+}
+.status-select.status-akan { background: var(--blue-soft); }
+.status-select.status-berjalan { background: var(--blue-line); color: #ffffff; }
+.status-select.status-selesai { background: #ffffff; }
+
+/* Form milik pemilik barang */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 0 18px;
+}
+.form-grid .form-group {
+    display: flex;
+    flex-direction: column;
+}
+.form-grid .form-tombol {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+.teks-kecil {
+    font-size: 12px;
+}
+
+/* Pratinjau gambar di form tambah/ubah barang */
+.preview-gambar {
+    margin-top: 10px;
+    max-width: 260px;
+}
+.preview-gambar img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border: 1px solid var(--blue-line);
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+/* Kartu barang di dashboard mitra */
+.panel .card {
+    width: 240px;
+}
+.panel .card h3 {
+    min-height: 0;
+}
+
+@media (max-width: 600px) {
+    .panel,
+    .stat-card {
+        padding: 18px;
+    }
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ============================================
+   KOTAK MASUK PESAN
+   ============================================ */
+
+.pesan {
+    border: 1px solid var(--blue-line);
+    border-left: 4px solid var(--blue-line);
+    border-radius: 8px;
+    padding: 15px 16px;
+    margin-bottom: 14px;
+    background: #ffffff;
+}
+
+.pesan-baru {
+    border-left-color: var(--blue-deep);
+    background: var(--blue-card);
+}
+
+.pesan-kepala {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+
+.pesan-kepala strong {
+    font-size: 15px;
+}
+
+.pesan-meta {
+    margin: 3px 0 0;
+    font-size: 12.5px;
+    color: var(--text);
+}
+
+.pesan-meta a {
+    color: var(--blue-deep);
+}
+
+.pesan-aksi {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.pesan-aksi form {
+    margin: 0;
+}
+
+.pesan-subjek {
+    margin: 10px 0 6px;
+    font-size: 15px;
+    color: var(--text);
+}
+
+.pesan-isi {
+    margin: 0 0 12px;
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--text);
+    word-wrap: break-word;
+}
+
+.btn-bahaya {
+    background-color: #dc2626;
+    color: #fff;
+}
+
+.btn-bahaya:hover {
+    background-color: #b91c1c;
+}
+
+/* Daftar pertanyaan di halaman kontak */
+.faq-list {
+    margin: 0;
+    padding-left: 20px;
+    line-height: 1.7;
+}
+
+.faq-list li {
+    margin-bottom: 10px;
+}
+
+.faq-list li:last-child {
+    margin-bottom: 0;
+}

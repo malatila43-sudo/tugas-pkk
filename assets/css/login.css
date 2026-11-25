@@ -1,0 +1,351 @@
+﻿/* RESET & VARIABLE */
+:root {
+  --blue-bg: #0ea5e9;
+  --blue-panel: #e0f2fe;
+  --blue-soft: #f0f9ff;
+  --blue-line: #7dd3fc;
+  --blue-deep: #075985;
+  --text: #111827;
+  --radius: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body.auth-body {
+  background:
+    linear-gradient(rgba(219, 234, 254, 0.55), rgba(219, 234, 254, 0.55)),
+    url('../img/fishing.jpg') center / cover fixed no-repeat,
+    var(--blue-bg);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+
+/* CONTAINER SPLIT */
+.auth-wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 960px;
+  background: var(--blue-panel);
+  border: 2px solid var(--blue-line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(15, 76, 129, 0.35);
+}
+
+/* PANEL KIRI (HERO BRANDING) */
+.auth-hero {
+  flex: 1;
+  background: linear-gradient(160deg, #f0f9ff 0%, #bae6fd 100%);
+  color: var(--text);
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-right: 2px solid var(--blue-line);
+}
+
+.auth-hero::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: rgba(37, 99, 235, 0.25);
+  filter: blur(50px);
+  border-radius: 50%;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--blue-deep);
+}
+
+.hero-text {
+  position: absolute;
+  top: 150px;
+  left: 48px;
+  right: 48px;
+  text-align: center;
+}
+
+.hero-text h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.hero-text p {
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.logo.hero-logo {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo.hero-logo .brand-logo {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+.hero-features {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.hero-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.hero-feature-item i {
+  font-size: 20px;
+  color: var(--blue-deep);
+  background: #bae6fd;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.hero-feature-item h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.hero-feature-item p {
+  font-size: 12px;
+  color: var(--text);
+}
+
+/* PANEL KANAN (FORM CONTAINER) */
+.auth-container {
+  flex: 1.1;
+  padding: 44px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.back-link {
+  display: inline-block;
+  font-size: 13px;
+  color: var(--blue-deep);
+  text-decoration: none;
+  margin-bottom: 16px;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: #0c4a6e;
+}
+
+.auth-header h2 {
+  font-size: 24px;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.auth-header p {
+  font-size: 14px;
+  color: var(--text);
+  margin-top: 4px;
+  margin-bottom: 24px;
+}
+
+/* ROLE SWITCHER */
+.role-switcher {
+  display: flex;
+  background: var(--blue-soft);
+  padding: 4px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.role-btn {
+  flex: 1;
+  padding: 10px 14px;
+  border: none;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.role-btn.active {
+  background: var(--blue-bg);
+  color: var(--text);
+  box-shadow: 0 4px 12px rgba(15, 76, 129, 0.2);
+}
+
+/* INDICATOR & FORM */
+.role-indicator {
+  font-size: 12px;
+  background: var(--blue-soft);
+  color: var(--text);
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border-left: 3px solid var(--blue-deep);
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper i {
+  position: absolute;
+  left: 14px;
+  color: var(--blue-deep);
+  font-size: 15px;
+}
+
+.input-wrapper i.toggle-password {
+  left: auto;
+  right: 14px;
+  cursor: pointer;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 12px 14px 12px 42px;
+  border: 1.5px solid var(--blue-line);
+  border-radius: 10px;
+  font-size: 14px;
+  background: #ffffff;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-wrapper input:focus {
+  border-color: var(--blue-deep);
+  box-shadow: 0 0 0 4px rgba(15, 76, 129, 0.2);
+}
+
+/* ACTIONS & BUTTON */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  margin-bottom: 24px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.btn-primary.auth-btn {
+  width: 100%;
+  padding: 12px;
+  background: var(--blue-bg);
+  color: var(--text);
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-primary.auth-btn:hover {
+  background: #0c4a6e;
+}
+
+.btn-primary.auth-btn:active {
+  transform: scale(0.99);
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.auth-footer a {
+  color: var(--blue-deep);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE DESIGN (MOBILE) */
+@media (max-width: 768px) {
+  .auth-hero {
+    display: none; /* Sembunyikan hero di layar HP */
+  }
+
+  .auth-wrapper {
+    max-width: 440px;
+  }
+
+  .auth-container {
+    padding: 28px 24px;
+  }
+}
